@@ -1,0 +1,106 @@
+/* Variables de diseño con la paleta institucional del PAN */
+:root {
+  --color-bg: #0d1f3a;            /* Fondo gris claro para que resalte la tarjeta */
+  --color-card: #ffffff;          /* Fondo blanco de la tarjeta */
+  --color-primary: #0056B3;       /* Azul oficial del PAN */
+  --color-primary-hover: #004085; /* Azul PAN oscuro para efectos interactivos */
+  --color-text-dark: #1c2833;     /* Texto principal de alta legibilidad */
+  --color-text-muted: #627281;    /* Texto secundario de la ubicación y bio */
+  
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset básico para asegurar consistencia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal de la tarjeta */
+.profile-card {
+  background-color: var(--color-card);
+  width: 100%;
+  max-width: 355px;
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 86, 179, 0.1); /* Sutil sombra con tinte azul */
+  text-align: center;
+}
+
+/* Cabecera del perfil */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profile-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--color-primary); /* Borde azul institucional */
+}
+
+.profile-name {
+  color: var(--color-primary-hover);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.profile-location {
+  color: var(--color-primary); /* Ubicación destacada en azul */
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Biografía corta */
+.profile-bio {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+/* Lista de enlaces */
+.profile-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Espaciado idéntico entre los botones */
+}
+
+.profile-links a {
+  display: block;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Estados interactivos de los botones */
+.profile-links a:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.profile-links a:active {
+  transform: scale(0.98); /* Pequeño efecto de hundimiento al hacer clic */
+}
